@@ -1,4 +1,4 @@
-is.js is a tiny (219 bytes) strict type checker/engine which offer a little API to test JavaScript types as 
+is.js is a tiny (205 bytes) strict type checker/engine which offer a little API to test JavaScript types as 
 well as allows the creation of custom type checkers.
 
 Basic API explained below see tests.js for more test cases.
