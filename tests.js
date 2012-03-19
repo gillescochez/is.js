@@ -6,70 +6,70 @@ test('is._', function() {
 	is._('A');
 	is._('B');
 	
-	equal(is.a(new A), true, 'is.a(new A)');
-	equal(is.a(new B), false, 'is.a(new B)');
-	equal(is.b(new A), false, 'is.b(new A)');
-	equal(is.b(new B), true, 'is.b(new B)');
+	equal(is.A(new A), true, 'is.a(new A)');
+	equal(is.A(new B), false, 'is.a(new B)');
+	equal(is.B(new A), false, 'is.b(new A)');
+	equal(is.B(new B), true, 'is.b(new B)');
 });
 	
-test('is.object', function() {
+test('is.Object', function() {
 	expect(6);
-	equal(is.object({}), true, 'object test');
-	equal(is.object([]), false, 'array test');
-	equal(is.object(function(){}), false, 'function test');
-	equal(is.object(''), false, 'string test');
-	equal(is.object(1), false, 'number test');
-	equal(is.object(true), false, 'boolean test');
-	
-});
-
-test('is.array', function() {
-	expect(6);
-	equal(is.array({}), false, 'object test');
-	equal(is.array([]), true, 'array test');
-	equal(is.array(function(){}), false, 'function test');
-	equal(is.array(''), false, 'string test');
-	equal(is.array(1), false, 'number test');
-	equal(is.array(true), false, 'boolean test');
+	equal(is.Object({}), true, 'Object test');
+	equal(is.Object([]), false, 'Array test');
+	equal(is.Object(function(){}), false, 'function test');
+	equal(is.Object(''), false, 'string test');
+	equal(is.Object(1), false, 'number test');
+	equal(is.Object(true), false, 'boolean test');
 	
 });
 
-test('is.function', function() {
+test('is.Array', function() {
 	expect(6);
-	equal(is.function({}), false, 'object test');
-	equal(is.function([]), false, 'array test');
-	equal(is.function(function(){}), true, 'function test');
-	equal(is.function(''), false, 'string test');
-	equal(is.function(1), false, 'number test');
-	equal(is.function(true), false, 'boolean test');
+	equal(is.Array({}), false, 'Object test');
+	equal(is.Array([]), true, 'Array test');
+	equal(is.Array(function(){}), false, 'function test');
+	equal(is.Array(''), false, 'string test');
+	equal(is.Array(1), false, 'number test');
+	equal(is.Array(true), false, 'boolean test');
+	
 });
 
-test('is.string', function() {
+test('is.Function', function() {
 	expect(6);
-	equal(is.string({}), false, 'object test');
-	equal(is.string([]), false, 'array test');
-	equal(is.string(function(){}), false, 'function test');
-	equal(is.string(''), true, 'string test');
-	equal(is.string(1), false, 'number test');
-	equal(is.string(true), false, 'boolean test');
+	equal(is.Function({}), false, 'Object test');
+	equal(is.Function([]), false, 'Array test');
+	equal(is.Function(function(){}), true, 'function test');
+	equal(is.Function(''), false, 'string test');
+	equal(is.Function(1), false, 'number test');
+	equal(is.Function(true), false, 'boolean test');
 });
 
-test('is.number', function() {
+test('is.String', function() {
 	expect(6);
-	equal(is.number({}), false, 'object test');
-	equal(is.number([]), false, 'array test');
-	equal(is.number(function(){}), false, 'function test');
-	equal(is.number(''), false, 'string test');
-	equal(is.number(1), true, 'number test');
-	equal(is.number(true), false, 'boolean test');
+	equal(is.String({}), false, 'Object test');
+	equal(is.String([]), false, 'Array test');
+	equal(is.String(function(){}), false, 'function test');
+	equal(is.String(''), true, 'string test');
+	equal(is.String(1), false, 'number test');
+	equal(is.String(true), false, 'boolean test');
 });
 
-test('is.boolean', function() {
+test('is.Number', function() {
 	expect(6);
-	equal(is.boolean({}), false, 'object test');
-	equal(is.boolean([]), false, 'array test');
-	equal(is.boolean(function(){}), false, 'function test');
-	equal(is.boolean(''), false, 'string test');
-	equal(is.boolean(1), false, 'number test');
-	equal(is.boolean(true), true, 'boolean test');
+	equal(is.Number({}), false, 'Object test');
+	equal(is.Number([]), false, 'Array test');
+	equal(is.Number(function(){}), false, 'function test');
+	equal(is.Number(''), false, 'string test');
+	equal(is.Number(1), true, 'number test');
+	equal(is.Number(true), false, 'boolean test');
+});
+
+test('is.Boolean', function() {
+	expect(6);
+	equal(is.Boolean({}), false, 'Object test');
+	equal(is.Boolean([]), false, 'Array test');
+	equal(is.Boolean(function(){}), false, 'function test');
+	equal(is.Boolean(''), false, 'string test');
+	equal(is.Boolean(1), false, 'number test');
+	equal(is.Boolean(true), true, 'boolean test');
 });
