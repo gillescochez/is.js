@@ -1,1 +1,1 @@
-is = function(a,o,i){o._ = function(t){this[t.toLowerCase()] = function(i){return i.constructor == window[t]}};for (; i < a.length; i++) o._(a[i]);return o}('Object Array Function String Number Boolean'.split(' '),{},0)
+is=function(a,o,i){o._=function(t){this[t.toLowerCase()]=function(i){return i.constructor==window[t]}};for(;i<a.length;i++)o._(a[i]);return o}('Object Array Function String Number Boolean'.split(' '),{},0)
