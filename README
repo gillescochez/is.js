@@ -24,20 +24,20 @@ Builder
 JS Types
 --------
 
- is.object(anything);
+ is.Object(anything);
   - return true if anything was created by the object constructor
 
- is.array(anything);
+ is.Array(anything);
   - return true if anything was created by the array constructor
 
- is.function(anything);
+ is.Function(anything);
   - return true if anything was created by the function constructor
 
- is.string(anything);
+ is.String(anything);
   - return true if anything was created by the string constructor
 
- is.number(anything);
+ is.Number(anything);
   - return true if anything was created by the number constructor
 
- is.boolean(anything);
+ is.Boolean(anything);
   - return true if anything was created by the boolean constructor
