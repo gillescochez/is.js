@@ -1,9 +1,9 @@
-is = function(a, o) {
+is = function(a, o){
 
 	var l = a.length, i = 0;
 	
-	o._ = function(t) {
-		this[t.toLowerCase()] = function(i) {
+	o._ = function(t){
+		this[t.toLowerCase()] = function(i){
 			return i.constructor == window[t]
 		}
 	}
@@ -12,4 +12,4 @@ is = function(a, o) {
 	
 	return o
 	
-}(['Object','Array','Function','String','Number','Boolean'], {})
+}('Object Array Function String Number Boolean'.split(' '),{})
