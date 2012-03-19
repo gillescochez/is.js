@@ -1,0 +1,43 @@
+is.js is a tiny (280 bytes) strict type checker/engine which offer a little API to test JavaScript types as 
+well as allows the creation of custom type checkers.
+
+Basic API explained below see tests.js for more test cases.
+
+------------------------------------------------------------------------------------------------
+
+Builder
+-------------
+
+ is._(array);
+  - create one or multiple types checker function
+  - example:
+  
+	var C = function(){},
+		D = function(){};
+		
+	is._('C');
+	is._('D');
+	
+	console.log(is.c(new C) === true);
+	console.log(is.d(new D) === true);
+
+JS Types
+--------
+
+ is.object(anything);
+  - return true if anything was created by the object constructor
+
+ is.array(anything);
+  - return true if anything was created by the array constructor
+
+ is.function(anything);
+  - return true if anything was created by the function constructor
+
+ is.string(anything);
+  - return true if anything was created by the string constructor
+
+ is.number(anything);
+  - return true if anything was created by the number constructor
+
+ is.boolean(anything);
+  - return true if anything was created by the boolean constructor
