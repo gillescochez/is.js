@@ -2,8 +2,6 @@ is.js is a tiny (188 bytes) strict type checker/engine which offer a little API 
 
 Basic API explained below see tests.js for more test cases.
 
-------------------------------------------------------------------------------------------------
-
 Builder
 -------------
 
