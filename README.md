@@ -5,7 +5,7 @@ Basic API explained below see tests.js for more test cases.
 Builder
 -------------
 
- is._(string);
+ is._(string [, context]);
   - create one custom type checker function
   - example:
   
