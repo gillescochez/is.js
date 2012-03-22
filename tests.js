@@ -2,17 +2,25 @@ test('is._ engine', function() {
 	
 	A = function(){};
 	B = function(){};
+	A.C = function(){};
 	B.C = function(){};
+	C = function(){};
 		
 	is._('A');
 	is._('B');
 	is._('C', B);
+	
+	expect(9);
 	
 	equal(is.A(new A), true, 'is.A(new A)');
 	equal(is.A(new B), false, 'is.A(new B)');
 	equal(is.B(new A), false, 'is.B(new A)');
 	equal(is.B(new B), true, 'is.B(new B)');
 	equal(is.C(new B.C), true, 'is.C(new C)');
+	equal(is.C(new A.C, A), true, 'is.C(new A.C, A)');
+	equal(is.C(new C, A), false, 'is.C(new C, A)');
+	equal(is.C(new A.C, window), false, 'is.C(new A.C, window)');
+	equal(is.C(new C, window), true, 'is.C(new C, window)');
 });
 
 test('is.Object', function() {
