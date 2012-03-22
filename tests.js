@@ -1,17 +1,20 @@
-test('is._', function() {
+test('is._ engine', function() {
 	
 	A = function(){};
 	B = function(){};
+	B.C = function(){};
 		
 	is._('A');
 	is._('B');
+	is._('C', B);
 	
-	equal(is.A(new A), true, 'is.a(new A)');
-	equal(is.A(new B), false, 'is.a(new B)');
-	equal(is.B(new A), false, 'is.b(new A)');
-	equal(is.B(new B), true, 'is.b(new B)');
+	equal(is.A(new A), true, 'is.A(new A)');
+	equal(is.A(new B), false, 'is.A(new B)');
+	equal(is.B(new A), false, 'is.B(new A)');
+	equal(is.B(new B), true, 'is.B(new B)');
+	equal(is.C(new B.C), true, 'is.C(new C)');
 });
-	
+
 test('is.Object', function() {
 	expect(6);
 	equal(is.Object({}), true, 'Object test');
