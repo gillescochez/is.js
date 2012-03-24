@@ -2,9 +2,10 @@ test('is._ engine', function() {
 	
 	A = function(){};
 	B = function(){};
+	C = function(){};
+
 	A.C = function(){};
 	B.C = function(){};
-	C = function(){};
 		
 	is._('A');
 	is._('B');
