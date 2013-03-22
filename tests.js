@@ -25,7 +25,8 @@ test('is._ engine', function() {
 });
 
 test('is.Object', function() {
-	expect(6);
+	expect(7);
+	equal(is.Object(new RegExp('abc|bcd')), false, 'RegExp test');
 	equal(is.Object({}), true, 'Object test');
 	equal(is.Object([]), false, 'Array test');
 	equal(is.Object(function(){}), false, 'function test');
@@ -36,7 +37,8 @@ test('is.Object', function() {
 });
 
 test('is.Array', function() {
-	expect(6);
+	expect(7);
+	equal(is.Array(new RegExp('abc|bcd')), false, 'RegExp test');
 	equal(is.Array({}), false, 'Object test');
 	equal(is.Array([]), true, 'Array test');
 	equal(is.Array(function(){}), false, 'function test');
@@ -47,7 +49,8 @@ test('is.Array', function() {
 });
 
 test('is.Function', function() {
-	expect(6);
+	expect(7);
+	equal(is.Function(new RegExp('abc|bcd')), false, 'RegExp test');
 	equal(is.Function({}), false, 'Object test');
 	equal(is.Function([]), false, 'Array test');
 	equal(is.Function(function(){}), true, 'function test');
@@ -57,7 +60,8 @@ test('is.Function', function() {
 });
 
 test('is.String', function() {
-	expect(6);
+	expect(7);
+	equal(is.String(new RegExp('abc|bcd')), false, 'RegExp test');
 	equal(is.String({}), false, 'Object test');
 	equal(is.String([]), false, 'Array test');
 	equal(is.String(function(){}), false, 'function test');
@@ -67,7 +71,8 @@ test('is.String', function() {
 });
 
 test('is.Number', function() {
-	expect(6);
+	expect(7);
+	equal(is.Number(new RegExp('abc|bcd')), false, 'RegExp test');
 	equal(is.Number({}), false, 'Object test');
 	equal(is.Number([]), false, 'Array test');
 	equal(is.Number(function(){}), false, 'function test');
@@ -77,11 +82,23 @@ test('is.Number', function() {
 });
 
 test('is.Boolean', function() {
-	expect(6);
+	expect(7);
+	equal(is.Boolean(new RegExp('abc|bcd')), false, 'RegExp test');
 	equal(is.Boolean({}), false, 'Object test');
 	equal(is.Boolean([]), false, 'Array test');
 	equal(is.Boolean(function(){}), false, 'function test');
 	equal(is.Boolean(''), false, 'string test');
 	equal(is.Boolean(1), false, 'number test');
 	equal(is.Boolean(true), true, 'boolean test');
+});
+
+test('is.RegExp', function() {
+	expect(7);
+	equal(is.RegExp(new RegExp('abc|bcd')), true, 'RegExp test');
+	equal(is.RegExp({}), false, 'Object test');
+	equal(is.RegExp([]), false, 'Array test');
+	equal(is.RegExp(function(){}), false, 'function test');
+	equal(is.RegExp(''), false, 'string test');
+	equal(is.RegExp(1), false, 'number test');
+	equal(is.RegExp(true), true, 'boolean test');
 });
