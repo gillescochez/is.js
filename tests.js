@@ -96,7 +96,7 @@ test('is.RegExp', function() {
 	equal(is.RegExp(function(){}), false, 'function test');
 	equal(is.RegExp(''), false, 'string test');
 	equal(is.RegExp(1), false, 'number test');
-	equal(is.RegExp(true), true, 'boolean test');
+	equal(is.RegExp(true), false, 'boolean test');
 	equal(is.RegExp(new Date()), false, 'date test');
 });
 
