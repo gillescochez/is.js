@@ -43,6 +43,8 @@ console.log(is.String(anything)); // return true if anything was created by the 
 
 console.log(is.Number(anything)); // return true if anything was created by the number constructor
 
-console.log(is.Boolean(anything)); // return true if anything was created by the boolean constructor
+console.log(is.Date(anything)); // return true if anything was created by the date constructor
+
+console.log(is.RegExp(anything)); // return true if anything was created by the RegExp constructor
 
 ```
